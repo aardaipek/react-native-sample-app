@@ -1,6 +1,17 @@
 import * as React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 
+import Button from './button';
+import Box from './box';
+import SvgSearch from './icons/search';
+import SvgRotate from './icons/rotate';
+import SvgBookmark from './icons/bookmark';
+
+import theme from '../utils/theme';
+
+
+
+
 function TabBar({ state, descriptors, navigation }) {
   return (
     <View style={{ flexDirection: 'row' }}>
@@ -34,11 +45,20 @@ function TabBar({ state, descriptors, navigation }) {
           });
         };
 
-        return (
-          <TouchableOpacity onPress={onPress} onLongPress={onLongPress}>
-            <Text>{label}</Text>
-          </TouchableOpacity>
-        );
+        return label === 'Search' ? (
+            <Box p={15} bg='white' mt={-15} borderRadius='full'>
+                <Button key={label} size={56}  bg='red' borderRadius='full'  onPress={onPress} onLongPress={onLongPress}>
+                    <SvgSearch stroke='white' ></SvgSearch>
+                </Button>
+            </Box>
+        ) : 
+        (
+          <Button key={label} flex={1} flexDirection='column' pt={6} height={56} onPress={onPress} onLongPress={onLongPress}>
+            {label === 'History' &&  <SvgRotate stroke={theme.colors.gray}></SvgRotate>}
+            {label === 'Favorite' &&  <SvgBookmark stroke={theme.colors.gray}></SvgBookmark>}
+            <Box size={3} bg={isFocused ? 'red' : 'white'} mt={6} ></Box>
+          </Button>
+        )
       })}
     </View>
   );
