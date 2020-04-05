@@ -6,8 +6,8 @@ const radii = {
 };
 
 const colors = {
-    red: '#E11E3C',
-    gray: '#758291',
+    red: '#f73859',
+    gray: '#8785a2',
 }
 
 export default {space,radii,colors,};

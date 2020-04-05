@@ -46,8 +46,8 @@ function TabBar({ state, descriptors, navigation }) {
         };
 
         return label === 'Search' ? (
-            <Box p={15} bg='white' mt={-15} borderRadius='full'>
-                <Button key={label} size={56}  bg='red' borderRadius='full'  onPress={onPress} onLongPress={onLongPress}>
+            <Box key={label} p={15} bg='white' mt={-15} borderRadius='full'>
+                <Button  size={56}  bg='red' borderRadius='full'  onPress={onPress} onLongPress={onLongPress}>
                     <SvgSearch stroke='white' ></SvgSearch>
                 </Button>
             </Box>

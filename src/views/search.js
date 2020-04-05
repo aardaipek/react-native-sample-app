@@ -6,9 +6,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import DetailView from './detail';
 
 import BoxCenter from '../components/box-center';
-import Box from '../components/box';
 
-import SvgSearch from '../components/icons/search';
+import SvgBrand from '../components/icons/brand';
  
 const SearchStack = createStackNavigator();
 
@@ -20,6 +19,7 @@ function SearchView({ navigation }) {
         title="Go to Details"
         onPress={() => navigation.navigate('Detail')}
       />
+      <SvgBrand width={86} height={60}></SvgBrand>
     </BoxCenter>
   );
 }

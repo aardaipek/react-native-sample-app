@@ -10,7 +10,7 @@ function SvgRotateCcw(props) {
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="rotate-ccw_svg__feather rotate-ccw_svg__feather-rotate-ccw"
+      className=""
       {...props}
     >
       <path d="M1 4v6h6" />
