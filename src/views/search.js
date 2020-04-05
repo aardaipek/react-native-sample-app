@@ -8,13 +8,14 @@ import DetailView from './detail';
 import BoxCenter from '../components/box-center';
 import Box from '../components/box';
 
+import SvgSearch from '../components/icons/search';
  
 const SearchStack = createStackNavigator();
 
 function SearchView({ navigation }) {
   return (
     <BoxCenter >
-      <Text>Search!</Text>
+      <Text>Arama Geçmişi</Text>
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate('Detail')}
