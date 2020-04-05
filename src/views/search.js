@@ -1,21 +1,25 @@
 import * as  React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { StyleSheet, Text,Button, View } from 'react-native';
+import {  Text,Button } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import DetailView from './detail';
 
+import BoxCenter from '../components/box-center';
+import Box from '../components/box';
+
+ 
 const SearchStack = createStackNavigator();
 
 function SearchView({ navigation }) {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <BoxCenter >
       <Text>Search!</Text>
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate('Detail')}
       />
-    </View>
+    </BoxCenter>
   );
 }
 
