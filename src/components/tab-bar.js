@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View} from 'react-native';
 
 import Button from './button';
 import Box from './box';
