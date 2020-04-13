@@ -10,7 +10,8 @@ const colors = {
     gray: '#8785a2',
     textColor: '#eb4559',
     white: '#ffffff',
-    textDark: '#21243d'
+    textDark: '#21243d',
+    blue:'#495aff'
 }
 
 export default {space,radii,colors,};

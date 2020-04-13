@@ -21,7 +21,6 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <ThemeProvider theme ={Theme}>
-      <Box flex={1} as={SafeAreaView}>
         <NavigationContainer>
           <Tab.Navigator tabBar={props => <TabBar {...props} />}>
             <Tab.Screen name="History" component={HistoryView} />
@@ -29,7 +28,6 @@ export default function App() {
             <Tab.Screen name="Favorite" component={FavoriteView} />
           </Tab.Navigator>
         </NavigationContainer>
-      </Box>
     </ThemeProvider>
   );
 }
