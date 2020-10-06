@@ -24,9 +24,9 @@ export default function App() {
     <ThemeProvider theme ={Theme}>
         <NavigationContainer>
           <Tab.Navigator tabBar={props => <TabBar {...props} />}>
+          <Tab.Screen name="Home" component={HomeView} />
             <Tab.Screen name="History" component={HistoryView} />
             <Tab.Screen name="Search" component={SearchViewStack} />
-            <Tab.Screen name="Home" component={HomeView} />
             <Tab.Screen name="Favorite" component={FavoriteView} />
           </Tab.Navigator>
         </NavigationContainer>

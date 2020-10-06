@@ -55,9 +55,9 @@ function TabBar({ state, descriptors, navigation }) {
         ) : 
         (
           <Button key={label} flex={1} flexDirection='column' pt={6} height={56} onPress={onPress} onLongPress={onLongPress}>
-            {label === 'History' &&  <SvgRotate stroke={theme.colors.gray}></SvgRotate>}
+            {label === 'Home' &&  <SvgBookmark stroke={theme.colors.gray}></SvgBookmark>} 
+            {label === 'History' &&  <SvgRotate stroke={theme.colors.gray}></SvgRotate>} 
             {label === 'Favorite' &&  <SvgBookmark stroke={theme.colors.gray}></SvgBookmark>}
-            {label === 'Home' &&  <SvgBookmark stroke={theme.colors.gray}></SvgBookmark>}
             {label === 'Search' && !isFocused &&  <SvgSearch stroke={theme.colors.gray}></SvgSearch>}
             <Box size={4} bg={isFocused ? 'blue' : 'white'} mt={6} borderRadius='full' ></Box>
           </Button>
