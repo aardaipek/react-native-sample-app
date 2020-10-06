@@ -44,11 +44,12 @@ function TabBar({ state, descriptors, navigation }) {
             target: route.key,
           });
         };
+     
 
-        return label === 'Search' ? (
+        return isFocused ? (
             <Box key={label} p={15} bg='white' mt={-15} borderRadius='full'>
                 <Button  size={56}  bg='blue' borderRadius='full'  onPress={onPress} onLongPress={onLongPress}>
-                    <SvgSearch stroke='white' ></SvgSearch>
+                <SvgSearch stroke='white'></SvgSearch>
                 </Button>
             </Box>
         ) : 
@@ -56,6 +57,8 @@ function TabBar({ state, descriptors, navigation }) {
           <Button key={label} flex={1} flexDirection='column' pt={6} height={56} onPress={onPress} onLongPress={onLongPress}>
             {label === 'History' &&  <SvgRotate stroke={theme.colors.gray}></SvgRotate>}
             {label === 'Favorite' &&  <SvgBookmark stroke={theme.colors.gray}></SvgBookmark>}
+            {label === 'Home' &&  <SvgBookmark stroke={theme.colors.gray}></SvgBookmark>}
+            {label === 'Search' && !isFocused &&  <SvgSearch stroke={theme.colors.gray}></SvgSearch>}
             <Box size={4} bg={isFocused ? 'blue' : 'white'} mt={6} borderRadius='full' ></Box>
           </Button>
         )

@@ -10,6 +10,7 @@ import Theme from './src/utils/theme'
 
 import SearchViewStack from './src/views/search';
 import FavoriteView from './src/views/favorite';
+import HomeView from './src/views/home';
 import HistoryView from './src/views/history';
 import TabBar from './src/components/tab-bar';
 import Box from './src/components/box';
@@ -25,6 +26,7 @@ export default function App() {
           <Tab.Navigator tabBar={props => <TabBar {...props} />}>
             <Tab.Screen name="History" component={HistoryView} />
             <Tab.Screen name="Search" component={SearchViewStack} />
+            <Tab.Screen name="Home" component={HomeView} />
             <Tab.Screen name="Favorite" component={FavoriteView} />
           </Tab.Navigator>
         </NavigationContainer>
