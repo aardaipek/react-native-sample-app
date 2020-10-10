@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
 
-function SvgBookmark(props) {
+function SvgRotateCcw(props) {
   return (
     <Svg
       width="1em"
@@ -12,12 +12,13 @@ function SvgBookmark(props) {
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="bookmark_svg__feather bookmark_svg__feather-bookmark"
+      className="rotate-ccw_svg__feather rotate-ccw_svg__feather-rotate-ccw"
       {...props}
     >
-      <Path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" />
+      <Path d="M1 4v6h6" />
+      <Path d="M3.51 15a9 9 0 102.13-9.36L1 10" />
     </Svg>
   );
 }
 
-export default SvgBookmark;
+export default SvgRotateCcw;
