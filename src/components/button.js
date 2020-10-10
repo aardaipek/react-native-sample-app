@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styled from 'styled-components';
-import { compose,color,size,space,flexbox,layout,borderRadius } from 'styled-system';
+import { compose,color,size,space,flexbox,layout,borderRadius,typography  } from 'styled-system';
 
 const Button = styled(TouchableOpacity)(
-    compose(flexbox,space,color,size,layout,borderRadius)
+    compose(flexbox,space,color,size,layout,borderRadius,typography )
 )
 
 Button.defaultProps = {

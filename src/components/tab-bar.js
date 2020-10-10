@@ -1,16 +1,13 @@
 import * as React from 'react';
-import { View} from 'react-native';
-
+import { View,Text} from 'react-native';
 import Button from './button';
 import Box from './box';
-import SvgSearch from './icons/search';
-import SvgRotate from './icons/rotate';
-import SvgBookmark from './icons/bookmark';
-
+import SvgUser from './icons/user';
+import SvgHome from './icons/home';
+import SvgActivity from './icons/activity';
 import theme from '../utils/theme';
 
-
-
+import {SourceSansPro_400Regular} from '@expo-google-fonts/source-sans-pro'
 
 function TabBar({ state, descriptors, navigation }) {
   return (
@@ -44,21 +41,21 @@ function TabBar({ state, descriptors, navigation }) {
             target: route.key,
           });
         };
-     
 
-        return isFocused ? (
-            <Box key={label} p={15} bg='white' mt={-15} borderRadius='full'>
-                <Button  size={56}  bg='blue' borderRadius='full'  onPress={onPress} onLongPress={onLongPress}>
-                <SvgSearch stroke='white'></SvgSearch>
+        return isFocused ?
+        (<Box key={label} p={15} bg='white' mt={-10} borderRadius='full'>
+                <Button  size={36}  fontFamily={SourceSansPro_400Regular} 
+                 bg={theme.colors.cyanGreen} width={label == 'Home' ? label.length * 15 : label.length * 10}
+                  borderRadius='full' onPress={onPress} onLongPress={onLongPress}>
+                    <Text color= {theme.colors.white} >{label}</Text>
                 </Button>
             </Box>
-        ) : 
-        (
+            ) :
+            (
           <Button key={label} flex={1} flexDirection='column' pt={6} height={56} onPress={onPress} onLongPress={onLongPress}>
-            {label === 'Home' &&  <SvgBookmark stroke={theme.colors.gray}></SvgBookmark>} 
-            {label === 'History' &&  <SvgRotate stroke={theme.colors.gray}></SvgRotate>} 
-            {label === 'Favorite' &&  <SvgBookmark stroke={theme.colors.gray}></SvgBookmark>}
-            {label === 'Search' && !isFocused &&  <SvgSearch stroke={theme.colors.gray}></SvgSearch>}
+            {label === 'Home' &&  <SvgHome stroke={theme.colors.gray}></SvgHome>}
+            {label === 'Activity' &&  <SvgActivity stroke={theme.colors.gray}></SvgActivity>}
+            {label === 'Profile' &&  <SvgUser stroke={theme.colors.gray}></SvgUser>}
             <Box size={4} bg={isFocused ? 'blue' : 'white'} mt={6} borderRadius='full' ></Box>
           </Button>
         )

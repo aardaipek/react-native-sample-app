@@ -1,7 +1,7 @@
 import * as React from "react";
-import Svg, { Path } from "react-native-svg";
+import Svg, { Path, Circle } from "react-native-svg";
 
-function SvgBookmark(props) {
+function SvgUser(props) {
   return (
     <Svg
       width="1em"
@@ -12,12 +12,13 @@ function SvgBookmark(props) {
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="bookmark_svg__feather bookmark_svg__feather-bookmark"
+      className="user_svg__feather user_svg__feather-user"
       {...props}
     >
-      <Path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" />
+      <Path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+      <Circle cx={12} cy={7} r={4} />
     </Svg>
   );
 }
 
-export default SvgBookmark;
+export default SvgUser;

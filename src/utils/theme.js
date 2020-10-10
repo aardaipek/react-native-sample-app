@@ -1,3 +1,5 @@
+import {SourceSansPro_400Regular} from '@expo-google-fonts/source-sans-pro'
+
 const space = [];
 
 const radii = {
@@ -11,7 +13,14 @@ const colors = {
     textColor: '#eb4559',
     white: '#ffffff',
     textDark: '#21243d',
-    blue:'#495aff'
+    blue:'#495aff',
+    cyanGreen : '#03c4a1'
 }
 
-export default {space,radii,colors,};
+const fontFamily = {
+    sourceSansProRegular400 : SourceSansPro_400Regular,
+}
+
+
+
+export default {space,radii,colors,fontFamily};

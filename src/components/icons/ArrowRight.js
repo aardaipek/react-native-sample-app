@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
 
-function SvgBookmark(props) {
+function SvgArrowRight(props) {
   return (
     <Svg
       width="1em"
@@ -12,12 +12,12 @@ function SvgBookmark(props) {
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="bookmark_svg__feather bookmark_svg__feather-bookmark"
+      className="arrow-right_svg__feather arrow-right_svg__feather-arrow-right"
       {...props}
     >
-      <Path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" />
+      <Path d="M5 12h14M12 5l7 7-7 7" />
     </Svg>
   );
 }
 
-export default SvgBookmark;
+export default SvgArrowRight;
