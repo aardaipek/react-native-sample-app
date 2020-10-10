@@ -9,8 +9,10 @@ import { Ionicons } from '@expo/vector-icons'; // not used
 import Theme from './src/utils/theme'
 
 import HomeView from './src/pages/home';
+import SearchView from './src/pages/search';
 import ProfileView from './src/pages/profile';
 import ActivityView from './src/pages/activity';
+import FollowersView from './src/pages/followers';
 import TabBar from './src/components/tab-bar';
 
 
@@ -23,8 +25,10 @@ export default function App() {
         <NavigationContainer>
           <Tab.Navigator tabBar={props => <TabBar {...props} />}>
           <Tab.Screen name="Home" component={HomeView} />
-            <Tab.Screen name="Activity" component={ActivityView} />
-            <Tab.Screen name="Profile" component={ProfileView} />
+          <Tab.Screen name="Activity" component={ActivityView} />
+          <Tab.Screen name="Followers" component={FollowersView} />
+          <Tab.Screen name="Profile" component={ProfileView} />
+          <Tab.Screen name="Search" component={SearchView} />
           </Tab.Navigator>
         </NavigationContainer>
     </ThemeProvider>

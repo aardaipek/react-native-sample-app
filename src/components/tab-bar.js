@@ -2,9 +2,13 @@ import * as React from 'react';
 import { View,Text} from 'react-native';
 import Button from './button';
 import Box from './box';
+
 import SvgUser from './icons/user';
+import SvgUsers from './icons/users';
 import SvgHome from './icons/home';
+import SvgSearch from './icons/search';
 import SvgActivity from './icons/activity';
+
 import theme from '../utils/theme';
 
 import {SourceSansPro_400Regular} from '@expo-google-fonts/source-sans-pro'
@@ -55,7 +59,9 @@ function TabBar({ state, descriptors, navigation }) {
           <Button key={label} flex={1} flexDirection='column' pt={6} height={56} onPress={onPress} onLongPress={onLongPress}>
             {label === 'Home' &&  <SvgHome stroke={theme.colors.gray}></SvgHome>}
             {label === 'Activity' &&  <SvgActivity stroke={theme.colors.gray}></SvgActivity>}
+            {label === 'Followers' &&  <SvgUsers stroke={theme.colors.gray}></SvgUsers>}
             {label === 'Profile' &&  <SvgUser stroke={theme.colors.gray}></SvgUser>}
+            {label === 'Search' &&  <SvgSearch stroke={theme.colors.gray}></SvgSearch>}
             <Box size={4} bg={isFocused ? 'blue' : 'white'} mt={6} borderRadius='full' ></Box>
           </Button>
         )
