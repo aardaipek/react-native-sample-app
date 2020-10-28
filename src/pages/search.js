@@ -17,12 +17,7 @@ import bg from '../../assets/bg3.jpeg';
 function SearchView({ navigation }) {
   return (
     <Box as={SafeAreaView}>
-      <Box as={ImageBackground} source={bg} style={{width:'100%',height:'350px', justifyContent:'center' , alignItems:'center'}} >
-        <Box py={20} >
-          <SvgBrand width={86} height={60}></SvgBrand>
-        </Box>
-      </Box>
-      <Box p={10} mt={-40} >
+      <Box p={10} >
           <SearchBar></SearchBar>
       </Box>
     </Box>
